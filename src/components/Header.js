@@ -5,10 +5,10 @@ import { FiMenu } from 'react-icons/fi';
 import { MdClose } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import ReactAudioPlayer from 'react-audio-player';
-import { useSelector } from 'react-redux';
-import { selectPages } from '../features/pageSections/pageSlice';
-import YouTube from '@u-wave/react-youtube';
-import ReactPlayer from 'react-player';
+// import { useSelector } from 'react-redux';
+// import { selectPages } from '../features/pageSections/pageSlice';
+// import YouTube from '@u-wave/react-youtube';
+// import ReactPlayer from 'react-player';
 
 const Header = () => {
     const [burgerStatus, setBurgerStatus] = useState(false);
@@ -18,7 +18,7 @@ const Header = () => {
     const [contactShown, setContactShown] = useState(false);
     const [specialShown, setSpecialShown] = useState(false);
 
-    const burgerClick = () => setBurgerStatus(!burgerStatus);
+    //const burgerClick = () => setBurgerStatus(!burgerStatus);
     const speakerClick = () => setMusicStatus(!musicStatus);   
 
     return (
@@ -71,17 +71,17 @@ const Header = () => {
                 </button>
                 {locShown && (
                     <>
-                    <img src='pexels-photo-699466.jpeg'/>
+                    <img src='pexels-photo-699466.jpeg' alt='img1'/>
                     </>
                 )}
                 {aboutShown && (
-                    <img src='pexels-photo-9812128.jpeg'/>
+                    <img src='pexels-photo-9812128.jpeg' alt='img2'/>
                 )}
                 {contactShown && (
-                    <img src='pexels-photo-9996108.jpeg'/>
+                    <img src='pexels-photo-9996108.jpeg' alt='img3'/>
                 )}
                 {specialShown && (
-                    <img src='pexels-photo-1837590.jpeg'/>
+                    <img src='pexels-photo-1837590.jpeg' alt='img4'/>
                 )}
                 
             </BurgerMenu>
@@ -217,9 +217,6 @@ const MusicToggle = styled(BiSpeaker)`
         transform: scale(1.1);
     } 
 `
-const MusicToggleO = styled(MusicToggle)`
-    color: red;
-`
 
 const CustomMenu = styled(FiMenu)`
     cursor: pointer;
@@ -250,7 +247,4 @@ const CustomClose = styled(MdClose)`
 const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
-`
-const Music = styled.div`
-
 `
