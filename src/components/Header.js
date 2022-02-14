@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import {BiSpeaker} from 'react-icons/bi';
 import { FiMenu } from 'react-icons/fi';
 import { MdClose } from 'react-icons/md';
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
 import ReactAudioPlayer from 'react-audio-player';
 // import { useSelector } from 'react-redux';
 // import { selectPages } from '../features/pageSections/pageSlice';
