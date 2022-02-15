@@ -34,8 +34,8 @@ const Container = styled.div`
     //background-color: #585858
     flex-direction: column;
     //background: #595959;
-    background-image: url('flowerRain.png');
-    
+    background-image: url('pexels-eberhard-grossgasteiger-1624438.jpg');
+    background-size: 100vh 100vw;
 `
 const TextContainer = styled.div`
 

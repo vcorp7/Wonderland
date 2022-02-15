@@ -2,14 +2,14 @@ import React from 'react';
 import Locations from './Locations';
 import styled from 'styled-components';
 import HeroSection from './HeroSection';
-import Footer from './Footer';
+//import Footer from './Footer';
 
 function Home() {
   return(
     <Container>
       <HeroSection/>
       <Locations/>
-      <Footer id='Location'/>
+     
     </Container>
     
   );

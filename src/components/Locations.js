@@ -48,10 +48,10 @@ const Cards = styled.div`
 
 const Container = styled.div`
     padding: 4rem;
-    background: #fff;
+    background: #708090;
     height: 100vh;
     width: 100vw;
-    color: #595959;
+    color: #DC143C;
     display: flex;
     //flex-flow: column;
     align-items: center;
@@ -70,9 +70,11 @@ const CardContainter = styled.div`
     max-width: 1120px;
     width: 90%;
     margin: 0 auto;
+    
 `
 const CardWrapper = styled.div`
     position: relative;
     display: flex;
     margin: 50px 0 45px;
+    border-style: bold;
 `

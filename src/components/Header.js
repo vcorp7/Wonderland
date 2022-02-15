@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {BiSpeaker} from 'react-icons/bi';
 import { FiMenu } from 'react-icons/fi';
 import { MdClose } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 //import { NavLink } from 'react-router-dom';
 import ReactAudioPlayer from 'react-audio-player';
 // import { useSelector } from 'react-redux';
@@ -25,23 +26,34 @@ const Header = () => {
 
         <Container>
             <Logo>
-                <button class='buttonl buttonh'>
+                <Link to={'/'}>
+                   <button class='buttonl buttonh'>
                     Wonderland
-                </button>
+                    </button> 
+                </Link>
+                
             </Logo>           
             <Menu>
-                <button class='button buttonh'>
-                    Locations
-                </button>
-                <button class='button buttonh'>
-                    About Us
-                </button>
-                <button class='button buttonh'>
-                    Contact Us
-                </button>
-                <button class='button buttonh'>
-                    Special Events
-                </button>
+                <Link to={'/Locations'}>
+                    <button class='button buttonh'>
+                        Locations
+                    </button> 
+                </Link>
+
+                <Link to='/Aboutus'>
+                  <button class='button buttonh'> About Us </button>  
+                </Link>
+                <Link to={'/Contactus'}>
+                    <button class='button buttonh'>
+                        Contact Us
+                    </button>
+                </Link>
+                <Link to={'/Specialevents'}>
+                    <button class='button buttonh'>
+                        Special Events
+                    </button>   
+                </Link>
+                
             </Menu>
 
 
@@ -57,18 +69,33 @@ const Header = () => {
                 <CloseWrapper>
                     <CustomClose onClick={() => setBurgerStatus(false)}/>
                 </CloseWrapper>
+                <BurgerLinkWrapper>
+                <Link to={'/Locations'}>
                 <button class='button buttonh' onMouseEnter={() => setLocShown(true)} onMouseLeave={() => setLocShown(false)}>
                     Locations
                 </button>
+                </Link>
+                <Link to='/Aboutus'>
                 <button class='button buttonh' onMouseEnter={() => setAboutShown(true)} onMouseLeave={() => setAboutShown(false)}>
                     About Us
-                </button>
+                </button>    
+                </Link>
+                <Link to={'/Contactus'}>
                 <button class='button buttonh' onMouseEnter={() => setContactShown(true)} onMouseLeave={() => setContactShown(false)}>
                     Contact Us
-                </button>
+                </button>    
+                </Link>
+               
+                <Link to={'/Specialevents'}>
                 <button class='button buttonh' onMouseEnter={() => setSpecialShown(true)} onMouseLeave={() => setSpecialShown(false)}>
                     Special Events
-                </button>
+                </button>    
+                </Link>    
+                </BurgerLinkWrapper>
+                
+     
+                
+                
                 {locShown && (
                     <>
                     <img src='pexels-photo-699466.jpeg' alt='img1'/>
@@ -113,7 +140,7 @@ const Container = styled.div`
         padding: 15px 32px;
         border: none;
         text-align: center;
-        //background: transparent;
+        //text-shadow: -1px -1px 0.01px #000000;
         border-radius: 12px;
         transition-duration: 0.4s;
         cursor: pointer;
@@ -144,12 +171,15 @@ const Menu = styled.div`
         background-color: transparent;
         font-family: Garamond;
         font-size: 18px;
-        color: white;
+        //color: white;
         text-transform: uppercase;
         padding: 20px 10px;
         cursor: pointer;
         flex-wrap: nowrap;
         border: none;
+        background: linear-gradient(to right, #a9a9a9, #d1d1d1, #a9a9a9);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
     }
     .buttonh:hover{
         //background-image: rgb(39, 39, 39);
@@ -192,7 +222,7 @@ const BurgerMenu = styled.div`
     transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.2s ease-in;
     button{
-        background-color: #545454;
+        background-color: transparent;
         padding: 20px 0;
         border-bottom: 1px solid rgba(0, 0, 0, .2);
         color: #c0c0c0;
@@ -201,6 +231,8 @@ const BurgerMenu = styled.div`
         text-transform: uppercase;
         flex-wrap: nowrap;
         border: none;
+        cursor: pointer;
+        display:flex;
     }
     
 `
@@ -247,4 +279,8 @@ const CustomClose = styled(MdClose)`
 const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
+`
+
+const BurgerLinkWrapper = styled.div`
+    justify: center;
 `

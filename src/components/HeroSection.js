@@ -12,9 +12,8 @@ function HeroSection() {
         </SubContainer>
         <Button>
           <a href='https://www.blender.org'>
-            <GiRabbitHead/> Follow Me!  
+            <GiRabbitHead/> Follow Me!
           </a>
-          
         </Button>
         
     </Container>
@@ -61,4 +60,9 @@ const Button = styled.button`
     height: 90px;
     font-size: 30px;
     border-radius: 12px;
+    text-decoration: none !important;
+    a{
+      text-decoration: none;
+      color: #fff;
+    }
 `

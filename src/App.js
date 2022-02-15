@@ -4,7 +4,9 @@ import Home from './components/Home';
 import Locations from './components/Locations';
 import Aboutus from './components/Aboutus';
 import Contactus from './components/Contactus';
+import Footer from './components/Footer';
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
+import Specialevents from './components/Specialevents';
 
 function App() {
   return (
@@ -16,8 +18,9 @@ function App() {
           <Route path='/Locations' element={<Locations/>}/>
           <Route path='/Aboutus' element={<Aboutus/>}/>
           <Route path='/Contactus' element={<Contactus/>}/>
+          <Route path='/Specialevents' element={<Specialevents/>}/>
         </Routes>
-        
+        <Footer/>
       </BrowserRouter>
     </div>
 

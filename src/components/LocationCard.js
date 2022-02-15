@@ -27,6 +27,7 @@ const Container = styled.li`
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
+  border-style: bold;
 `
 const LinkContainer = styled.div`
   display: flex;
