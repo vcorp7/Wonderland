@@ -35,7 +35,7 @@ const Container = styled.div`
     flex-direction: column;
     //background: #595959;
     background-image: url('pexels-eberhard-grossgasteiger-1624438.jpg');
-    background-size: 100vh 100vw;
+    background-size: cover;
 `
 const TextContainer = styled.div`
 
